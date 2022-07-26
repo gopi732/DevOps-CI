@@ -9,7 +9,7 @@ pipeline {
         }
 	stage ('test') {
 	    steps {
-		sh 'python3 test.py && coverage run test.py && coverage html && coverage report app.py test.py'
+		sh 'python3 test.py && coverage run test.py && coverage xml && coverage report app.py test.py'
 	    }
 	}	
 	stage('SonarQube Analysis') {
