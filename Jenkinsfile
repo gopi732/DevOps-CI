@@ -32,7 +32,7 @@ pipeline {
 	stage ('Publish Artifactory') {
 	    steps {
 		    withCredentials([usernamePassword(credentialsId: 'artifactory', passwordVariable: 'passwd', usernameVariable: 'user')]) {
-    		         sh 'jf rt upload test-reports/ python-app/'
+    		         sh 'jf rt upload test-reports/ DevOps-CI/'
 		    }	
 	    }
 	}
