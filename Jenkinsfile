@@ -7,7 +7,7 @@ pipeline {
                 sh 'rm -rf test-reports || true'  
             }
         }
-	stage ('test') {
+	stage ('Unit test') {
 	    steps {
 		sh 'python3 test.py && coverage run test.py && coverage xml && coverage report app.py test.py'
 	    }
