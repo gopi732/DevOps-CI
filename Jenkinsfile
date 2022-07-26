@@ -19,7 +19,7 @@ pipeline {
 	    steps {				
 		withSonarQubeEnv('admin') {
 		     sh '${scannerHome}/bin/sonar-scanner \
- 	   	     -D sonar.projectKey=sampledevopsproject \
+ 	   	     -D sonar.projectKey=DevOps \
 		     -D sonar.python.coverage.reportPaths=coverage.xml'	
 		}
 	    }
