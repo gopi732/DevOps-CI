@@ -17,7 +17,7 @@ pipeline {
 		scannerHome = tool 'SonarQube Scanner'
             }
 	    steps {				
-		withSonarQubeEnv('admin') {
+		withSonarQubeEnv('Sonar') {
 		     sh '${scannerHome}/bin/sonar-scanner \
  	   	     -D sonar.projectKey=DevOps \
 		     -D sonar.python.coverage.reportPaths=coverage.xml'	
